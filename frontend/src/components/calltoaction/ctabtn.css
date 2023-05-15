@@ -1,0 +1,14 @@
+.Ctabtn{
+    display: flex;
+    justify-content: center;
+}
+
+.Ctabtn p #get{
+    color: black;
+    text-align: center;
+    display: block;
+    text-indent: 0%;
+    padding: 3px;
+    background-color: #aaa;
+    border-radius: 10px;
+}
