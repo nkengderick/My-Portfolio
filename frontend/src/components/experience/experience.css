@@ -1,0 +1,11 @@
+.Experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Experience li{
+    text-align: left;
+}
+.Experience ul{
+    list-style-type: none;
+}
