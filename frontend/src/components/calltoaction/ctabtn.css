@@ -1,6 +1,8 @@
 .Ctabtn{
     display: flex;
     justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
 }
 
 .Ctabtn p #get{

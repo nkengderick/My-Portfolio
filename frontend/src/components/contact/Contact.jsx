@@ -1,22 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import './contact.css'
+
+import {MdOutlineEmail} from 'react-icons/md'
+import {BsWhatsapp} from 'react-icons/bs'
+
+
+import { Link } from "react-router-dom";
+import Calltoaction from "../calltoaction/Calltoaction";
+
 
 const Contact = () => {
   return (
-    <div className="Contact" id="contact">
+    <section className="Contact" id="contact">
      
-      <h2>Contact Me: </h2>
-      <h3>Email: </h3>
-      <p><Link>nkengbderick@gmail.com</Link></p>
-      <h3>Phone: </h3>
-      <p><Link>+ 237 6 71 24 13 54</Link></p>
-      <h3>WhatsAPP: </h3>
-      <p><Link>+(237) 681 390 155</Link></p>
-      <h3>LinkedIn: </h3>
-      <h3>Facebook: </h3>
+     <h5>Get in touch</h5>
+     <h2>Contact Me: </h2>
 
-    </div>
+     <div className="contactContainer">
+      <div className="contactOptions">
+        <article className="contactOption">
+          <MdOutlineEmail className="contactOptionIcon"/>
+          <h4>Email: </h4>
+          <h5>nkengbderick@gmail.com</h5>
+          <Link to="mailto:nkengbderick@gmail.com" target="blank">send a message</Link>
+        </article>
+
+        <article className="contactOption">
+          <BsWhatsapp className="contactOptionIcon"/>
+          <h4>WhatsAPP: </h4>
+          <h5>Direct message</h5>
+          <Link to="https://web.whatsapp.com/send?phone=+237681390155" target="blank">Whatsapp me</Link>
+        </article>
+      </div>
+      <Calltoaction />
+     </div>
+
+    </section>
   );
 }
 

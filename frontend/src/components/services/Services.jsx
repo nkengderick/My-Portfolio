@@ -1,14 +1,13 @@
 import React from 'react';
 import './services.css';
-import Calltoaction from '../calltoaction/Calltoaction';
 import Contact from '../contact/Contact'
-import Header from '../header/Header'
 import Ctabtn from '../calltoaction/ctabtn';
+import Navbar from '../navbar/Navbar';
 
 const Services = () => {
   return (
     <div className='Services' id='services'>
-      <Header />
+      <Navbar />
       <div className='serve'>
         <h1>Services</h1>
         <h2>Frontend Developement: </h2>
@@ -36,7 +35,6 @@ const Services = () => {
         <p>Interested in working with me?</p>
         <p>Contact me today to discuss your project and get a free discount</p>
     </div>
-    <Calltoaction />
     <Contact />
     </div>
   );

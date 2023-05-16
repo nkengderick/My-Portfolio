@@ -2,8 +2,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 .Header{
-    position: sticky;
-    top: 0%;
+    height: 100vh;
+    padding-top: 1rem;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    position: relative;
 }
+.profile{
+    background: linear-gradient(#f2f2f2, transparent);
+    height: 22rem;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+.profilepic{
+    width: 22rem;
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: 12rem 12rem 0 0;
+}
+
+.scroll{
+    position: absolute;
+    right: -1rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.h{
+    line-height: 1rem;
+}
+.Ctabtn{
+    margin: 0.5rem;
+}
+
+@media screen and(max-width:1024px) {
+    .Header{
+    height:68vh
+    }}
+@media screen and(max-width:600px) {
+    .Header{
+        height:100vh
+    }
+    .scroll{
+        display: none;
+    }
+    }
+    

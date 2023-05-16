@@ -1,17 +1,16 @@
 import './about.css'
 import React from 'react'
 import Contact from '../contact/Contact'
-import Header from '../header/Header'
 import Ctabtn from '../calltoaction/ctabtn'
-import Calltoaction from '../calltoaction/Calltoaction'
 
 import myimg from '../../assets/images/me.jpg'
+import Navbar from '../navbar/Navbar'
 
-
+var myig = require('../../assets/images/me.jpg');
 const About = () => {
   return (
     <div className='About' id='about'>
-              <Header />
+              <Navbar />
       <section>
           <h1>About Me</h1>
           <div className='img'>
@@ -39,7 +38,6 @@ const About = () => {
             <li>B.Eng in Computer Engineering 2nd year student in FET</li>
           </ul>
       </section>
-      <Calltoaction />
       <Contact />
     </div>
   )
