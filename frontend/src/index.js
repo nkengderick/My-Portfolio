@@ -4,12 +4,11 @@ import App from './App';
 import About from './components/about/About';
 import Services from './components/services/Services';
 
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-
 
 const router = createBrowserRouter([
   {

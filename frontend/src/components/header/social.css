@@ -7,3 +7,9 @@
     left: 1rem;
     bottom: 3rem;
 }
+.Social::after{
+    content: '';
+    width: 1px;
+    height: 2.5rem;
+    background: blue;
+}

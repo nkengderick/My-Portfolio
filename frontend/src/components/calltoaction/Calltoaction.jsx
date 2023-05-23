@@ -1,9 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import axios from "axios";
 import './calltoaction.css'
 import emailjs from 'emailjs-com'
+axios.defaults.baseURL = "http://localhost:8000";
 
 const Calltoaction = () => {
   const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+
   const handlesubmit = (e) => {
     var serviceID = 'service_nkengb'
     var templateID = 'template_qxeu0pf'
@@ -11,6 +18,18 @@ const Calltoaction = () => {
     var publicKey = 'lc6rPXqZ0XHRTH01y'
 
     e.preventDefault();
+
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+      alert("Please complete the form.");
+      return;
+    }
+
+    axios.post("/user", { name, email, message, })
+          .then(response => {
+            console.log(response.data)
+          })
+
+
     emailjs.sendForm(serviceID, templateID, templateParams, publicKey)
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
@@ -20,20 +39,20 @@ const Calltoaction = () => {
     }
   return (
     <div className='Calltoaction' id='calltoaction'>
-      <h3>Intersted in collaborating?</h3>
-      <p>Send me a message</p>
+      <h3 className='formhead'>Intersted in collaborating?</h3>
+      <p className='formhead'>Send me a message</p>
       <form className='contactorm' ref={form} onSubmit={handlesubmit}>
         <div>
           <label htmlFor="name">Name:</label>
-          <input type="text" id='name' name='name' required />
+          <input type="text" id='name' name='name' value={name} onChange={(e) => setName(e.target.value)} required />
         </div>
         <div>
           <label htmlFor="email">Email: </label>
-          <input type="email" id='email' name='email' required/>
+          <input type="email" id='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </div>
         <div>
           <label htmlFor="message">Message: </label>
-          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          <textarea name="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}  cols="30" rows="10" required></textarea>
         </div>
         <button type='submit' className='sbtbtn'>Submit</button>
       </form>

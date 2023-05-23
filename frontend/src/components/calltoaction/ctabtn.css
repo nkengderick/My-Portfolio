@@ -10,7 +10,26 @@
     text-align: center;
     display: block;
     text-indent: 0%;
+    height: 3rem;
     padding: 3px;
     background-color: #aaa;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+}
+.Ctabtn button[type="Download"]{
+    color: black;
+    height: 3rem;
+    text-align: center;
+    display: block;
+    padding: 3px;
+    background-color: #aaa;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+.Ctabtn button[type="Download"]:hover, .Ctabtn p #get:hover{
+    background-color: #888;
 }

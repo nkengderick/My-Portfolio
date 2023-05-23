@@ -1,7 +1,6 @@
 import './App.css'
 import Footer from './components/footer/Footer';
 import React from "react";
-
 import Navbar from './components/navbar/Navbar';
 import Experience from "./components/experience/Experience";
 import Projects from './components/Portfolio/Portfolio';
@@ -10,6 +9,7 @@ import Contact from "./components/contact/Contact";
 import Ctabtn from './components/calltoaction/ctabtn';
 import Header from './components/header/Header';
 import Landing from './components/Landing/Landing';
+
 
 const App = () => {  
   return (
