@@ -13,7 +13,6 @@ const Contact = () => {
   return (
     <section className="Contact" id="contact">
      
-     <h5>Get in touch</h5>
      <h2>Contact Me: </h2>
 
      <div className="contactContainer">

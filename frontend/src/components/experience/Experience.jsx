@@ -5,12 +5,16 @@ const Experience = () => {
   return (
     <div className="Experience" id="experience">
       <h1>Professional Experience</h1>
-      <ul>
-        <li>Experience full stack developer for 2years in FET</li>
-        <li>Developed and maintained Mobile apps using MERN</li>
-        <li>Manage databases</li>
-        <li>Collaborated with course mate in desktop app development using java</li>
-      </ul>
+      <h3>My Skills</h3>
+          <p>I have a mastery of the following programming languages and frameworks</p>
+            <ul>
+              <li>React</li>
+              <li>Express</li>
+              <li>Java</li>
+              <li>c/c++</li>
+              <li>MySQL</li>
+              <li>MongoDb</li>
+            </ul>
 
     </div>
   );

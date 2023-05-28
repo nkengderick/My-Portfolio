@@ -45,3 +45,26 @@ section li{
     margin-bottom: 0.5rem;
 }
 
+#cards{
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 2rem;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    width: 200px;
+    justify-content: center;
+}
+
+.card:hover{
+    background-color: #e2e2e2;
+    border: solid 1px #000;
+}

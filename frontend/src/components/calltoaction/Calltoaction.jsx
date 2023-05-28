@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react'
 import axios from "axios";
 import './calltoaction.css'
 import emailjs from 'emailjs-com'
+//default axios 
 axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.withCredentials = false;
+axios.defaults.headers = {'Access-Control-Allow-Origin' : '*', 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS' }
 
 const Calltoaction = () => {
   const form = useRef();
@@ -23,7 +26,7 @@ const Calltoaction = () => {
       alert("Please complete the form.");
       return;
     }
-
+//post user info and message to server and save in mongodb database
     axios.post("/user", { name, email, message, })
           .then(response => {
             console.log(response.data)
