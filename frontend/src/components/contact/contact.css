@@ -28,3 +28,30 @@ h2{
     border: solid 1px #000;
 }
 
+@media screen and(max-width:1024px) {
+    .Contact{
+    height:68vh
+    }
+    .contactOptions{
+        width: 100%;
+        background-color: #e2e2e2;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        row-gap: 2rem;
+        justify-content: center;
+    }
+    .contactOption{
+        padding: 1rem;
+        background-color: #f2f2f2;
+        width: 600px;
+        border-radius: 40px;
+    }
+}
+@media screen and(max-width:600px) {
+    .Contact{
+        height:100vh
+    }
+    }
+    

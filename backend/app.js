@@ -22,17 +22,6 @@ app.use(express.json())
 app.use(cookieParser())
 
 
-//db
-/*
-const uri = 'mongodb+srv://nkengbeza:aJONG-2002@cluster0.4onpbl5.mongodb.net/?retryWrites=true&w=majority'
-mongoose
-.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('db connected'))
-.catch((err) => console.log('db connection error', err))
-*/
 
 //root route
 app.use('/', express.static(path.join(__dirname, 'public')))
@@ -40,8 +29,7 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 //route
 app.use(require('./routes/root'))
 app.use(require('./routes/userRequestRoutes.js'))
-app.use(require('./routes/resumeroute'))
-
+app.use(require('./routes/projectroute.js'))
 //404 route
 app.all('*', (req, res) => {
   res.status(404)

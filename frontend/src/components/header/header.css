@@ -36,6 +36,9 @@
 .h{
     line-height: 1rem;
 }
+.h h2, .h h4, .h h5{
+    margin-top: 1rem;
+}
 .Ctabtn{
     margin: 0.5rem;
 }
