@@ -10,13 +10,21 @@ section{
     background-color: #f2f2f2;
     border-radius: 1rem;
 }
-section img{
+section .img{
+    background-color: #a2a2a2;
+}
+section .img img{
     border-radius: 50%;
     width: 15rem;
     height: auto;
     object-fit: cover;
-    margin-bottom: 1rem;
+    transform: rotate(25deg);
+    transition: rotate 2s ease-in-out;
 }
+section .img img:hover{
+    transform: rotate(0deg);
+}
+
 section h2{
     font-size: 2rem;
     margin-bottom: 0rem;
