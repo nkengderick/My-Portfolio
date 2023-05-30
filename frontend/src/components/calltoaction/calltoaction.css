@@ -4,9 +4,7 @@
     background-color: #ddd;
     padding: 1rem;
 }
-.formhead{
-    max-width: 90%;
-}
+
 form{
     display: flex;
     flex-direction: column;
@@ -33,7 +31,6 @@ input, textarea{
 }
 textarea{
     height: 150px;
-    width: auto;
 }
 button[type="submit"]{
     background-color: #c0c0c0;

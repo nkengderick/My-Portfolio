@@ -7,7 +7,7 @@ const path = require('path');
 
 //middleware
 
-router.get('^/$|/index(.html)?', (req, res) => {
+router.get('/apiroot', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'index.html'))
 })
 

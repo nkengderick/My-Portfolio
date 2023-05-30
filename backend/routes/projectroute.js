@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { createnewproject, getaproject, getAllprojects, updateproject, deleteproject} = require('../controllers/projectcontroller')
 
-router.route('/project')
+router.route('/apiproject')
     .get(getAllprojects)
     .get(getaproject)
     .post(createnewproject)

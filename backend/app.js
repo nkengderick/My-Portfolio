@@ -30,6 +30,8 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 app.use(require('./routes/root'))
 app.use(require('./routes/userRequestRoutes.js'))
 app.use(require('./routes/projectroute.js'))
+app.use(require('./routes/aboutroute.js'))
+
 //404 route
 app.all('*', (req, res) => {
   res.status(404)

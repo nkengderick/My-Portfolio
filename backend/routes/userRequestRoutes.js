@@ -3,7 +3,7 @@ const router = express.Router();
 const { createNewUserRequest, getAllUserRequest } = require('../controllers/userRequestController')
 
 
-router.route('/user')
+router.route('/apiuser')
     .get(getAllUserRequest)
     .post(createNewUserRequest)
 

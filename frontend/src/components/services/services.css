@@ -22,10 +22,6 @@
     justify-content: center;
 }
 
-.card:hover{
-    background-color: #e2e2e2;
-    border: solid 1px #000;
-}
 
 @media screen and (min-width: 1024px) {
     .servicecards{
