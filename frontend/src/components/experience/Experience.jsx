@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import './experience.css'
+import axios from 'axios'
+
+import {FaReact} from 'react-icons/fa'
 
 const Experience = () => {
+
+  const [skills, setSkills] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/apiskills')
+    .then((response) => {
+      setSkills(response.data)
+    })
+  }, [])
+
   return (
     <div className="Experience" id="experience">
       <h1>Professional Experience</h1>
       <h3>My Skills</h3>
-          <p>I have a mastery of the following programming languages and frameworks</p>
-            <ul>
-              <li>React</li>
-              <li>Express</li>
-              <li>Java</li>
-              <li>c/c++</li>
-              <li>MySQL</li>
-              <li>MongoDb</li>
-            </ul>
-
+      <p>I have a mastery of the following programming languages and frameworks</p>
+      <div className="skills">
+          {skills.map((skill) => (
+          <div key={skill.id} className="skill">
+          <h4>{skill.name}</h4>
+          <p>{skill.level}</p>
+          </div>
+      ))}
+      </div> 
     </div>
   );
 }

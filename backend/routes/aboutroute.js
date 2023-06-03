@@ -9,5 +9,5 @@ router.route('/apiabout')
     .get(getaboutme)
     .patch(updateAboutmedata)
 
-
+    
 module.exports = router

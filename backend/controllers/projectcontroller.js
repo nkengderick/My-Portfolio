@@ -1,18 +1,16 @@
 const Project = require('../models/project')
 const asyncHandler = require('express-async-handler')
-const path = require('path')
 
-const mern = path.join(__dirname, 'views/images', 'MER.jpg')
 
 const createnewproject = asyncHandler(async (req, res) => {
-    const {name, description, image} = req.body
+    const {title, description, link} = req.body
     
-    if (!name || !description || !image){
+    if (!title || !description || !link){
         return res.status(400).json({message: 'imcomplete project'})
     }
     
         //create and store request
-        const newProjectObject = { name, description, image }
+        const newProjectObject = { title, description, link }
         const newProject = await Project.create(newProjectObject)
     
         //create
@@ -50,16 +48,20 @@ const createnewproject = asyncHandler(async (req, res) => {
 
   const updateproject = asyncHandler(async (req, res) => {
     const project = await Project.findById(id).lean();
-    project.name = "";
+    project.title = "";
     project.description = "";
-    project.image = '';
 
     await project.save();
   })
 
   const deleteproject = asyncHandler(async (req, res) => {
-    const project = await Project.findById(1);
-    await project.remove();
-  })
+    const id = req.body
+    const project = await Project.findById(id);
+    if (!project) {
+      return res.status(404).json({message: "Project not found"})
+    }else{
+      await Project.deleteOne()
+      res.json({message: "Project deleted successfully"})
+    }  })
 
   module.exports = { createnewproject, getaproject, getAllprojects, updateproject, deleteproject}

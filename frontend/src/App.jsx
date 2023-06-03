@@ -22,7 +22,6 @@ const App = () => {
         <Projects />
         <Ctabtn />
         <Testimonial />
-        <div>You can get to me one on one below</div>
         <Contact />
         <Footer />
       </div>

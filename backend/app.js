@@ -31,6 +31,7 @@ app.use(require('./routes/root'))
 app.use(require('./routes/userRequestRoutes.js'))
 app.use(require('./routes/projectroute.js'))
 app.use(require('./routes/aboutroute.js'))
+app.use(require('./routes/skillsroute'))
 
 //404 route
 app.all('*', (req, res) => {

@@ -19,9 +19,6 @@ const About = () => {
       })
     }, [])
 
-
-
-
   return (
 
     <div className='About' id='about'>
