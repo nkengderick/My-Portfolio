@@ -1,7 +1,17 @@
 const userRequest = require('../models/userRequest')
+const nodemailer = require("nodemailer")
 
 const asyncHandler = require('express-async-handler')
 
+const transporter = nodemailer.createTransport({
+    host: "smtp.elasticemail.com",
+    port: 8000,
+    secure: true,
+    auth: {
+        user: "nkengportfolio@gmail.com",
+        pass: "7A9821F07508CCBB94F98299DB9630A1C23F",
+    }
+})
 //get request
 const getAllUserRequest = asyncHandler(async (req, res) => {
     const requests = await userRequest.find().lean()
@@ -29,6 +39,7 @@ const createNewUserRequest = asyncHandler(async (req, res) => {
 
     //create
     if(newrequest){
+
         res.status(201).json({
             message: 'Message recieved'
         })
@@ -38,6 +49,32 @@ const createNewUserRequest = asyncHandler(async (req, res) => {
         })
     }
 
+        const autoreplymail = {
+            from: "nkengportfolio@gmail.com",
+            to: email,
+            subject: "Message from Nkengbeza",
+            text: "Thanks for contacting Nkengbeza. Recieved your request and will attend to you shortly. Meanwhile, i offer...."
+        }
+        const newrequestnotification = {
+            from: "nkengportfolio@gmail.com",
+            to: "nkengportfolio@gmail.com",
+            subject: "Portfolio request message from [name]",
+            text: message,
+        }
+        transporter.sendMail(autoreplymail, function(error, info){
+            if(error){
+                console.log(error);
+            }else{
+                console.log('Email sent: ' + info.response)
+            }
+        })
+        transporter.sendMail(newrequestnotification, function(error, info){
+            if(error){
+                console.log(error);
+            }else{
+                console.log('Email sent: ' + info.response)
+            }
+        })
 })
 
 module.exports = { createNewUserRequest, getAllUserRequest }

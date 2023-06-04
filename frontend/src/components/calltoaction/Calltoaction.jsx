@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import axios from "axios";
 import './calltoaction.css'
-import emailjs from 'emailjs-com'
+
 //default axios 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = false;
@@ -15,10 +15,6 @@ const Calltoaction = () => {
 
 
   const handlesubmit = (e) => {
-    var serviceID = 'service_nkengb'
-    var templateID = 'template_qxeu0pf'
-    var templateParams = form.current
-    var publicKey = 'lc6rPXqZ0XHRTH01y'
 
     e.preventDefault();
 
@@ -35,7 +31,7 @@ if(action.value === "request"){
               .then(response => {
                 console.log(response.data)
               })
-}else if (action.value === "testify"){
+}else if (action.value = "testify"){
   const client = name
   const testimonial = message
     axios.post("/apitestimonials", {client, testimonial})
@@ -44,12 +40,7 @@ if(action.value === "request"){
               })
 }
 
-    emailjs.sendForm(serviceID, templateID, templateParams, publicKey)
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-          console.log('FAILED...', error);
-      });
+
     }
   return (
     <div className='Calltoaction' id='calltoaction'>

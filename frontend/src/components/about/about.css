@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: aliceblue;
     border-radius: 1rem;
     gap: 1.5rem;
 }
@@ -52,12 +52,11 @@ section .img img:hover{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: #d2d2d2;
+    background-color: skyblue;
     width: 100px;
     justify-content: center;
 }
 .card:hover{
-    background-color: #e2e2e2;
     border: solid 1px #000;
 }
 
