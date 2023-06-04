@@ -17,8 +17,8 @@ const Portfolio = () => {
 
   return (
     <div className='Portfolio' id='projects'>
-      <h1>Projects I've worked on</h1>
       <h2>Portfolio</h2>
+      <h1>Projects I've worked on</h1>
       <div className='projects'>
          { projects.map((newProject) => (
             <div key={newProject.id} className='project'>

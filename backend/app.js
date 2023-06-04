@@ -21,8 +21,6 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(cookieParser())
 
-
-
 //root route
 app.use('/', express.static(path.join(__dirname, 'public')))
 
@@ -32,6 +30,7 @@ app.use(require('./routes/userRequestRoutes.js'))
 app.use(require('./routes/projectroute.js'))
 app.use(require('./routes/aboutroute.js'))
 app.use(require('./routes/skillsroute'))
+app.use(require('./routes/testimonialroute'))
 
 //404 route
 app.all('*', (req, res) => {
@@ -44,7 +43,6 @@ app.all('*', (req, res) => {
     res.type('txt').send('404 Page Not Found')
   }
 })
-
 
 
 app.use(errorHandler)

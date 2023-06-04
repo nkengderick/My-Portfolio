@@ -1,0 +1,29 @@
+.testimonials{
+    width: 40%;
+    padding-bottom: 3rem;
+}
+
+.face img{
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 0.3rem solid black;
+    align-self: center;
+}
+
+.testimonial{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+.testimonial small{
+    color: blue;
+    font-weight: 300;
+    width: 80%;
+    margin: 1rem auto 0;
+}

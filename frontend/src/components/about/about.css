@@ -1,29 +1,18 @@
-*{
-    list-style: circle;
+.About{
+    margin-top: 3rem;
+    margin-bottom: 3rem;    
 }
 
-section{
+
+.about{
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #f2f2f2;
     border-radius: 1rem;
+    gap: 1.5rem;
 }
-section .img{
-    background-color: #a2a2a2;
-}
-section .img img{
-    border-radius: 50%;
-    width: 15rem;
-    height: auto;
-    object-fit: cover;
-    transform: rotate(25deg);
-    transition: rotate 2s ease-in-out;
-}
-section .img img:hover{
-    transform: rotate(0deg);
-}
+
 
 section h2{
     font-size: 2rem;
@@ -32,30 +21,26 @@ section h2{
 section h5{
     margin-bottom: 2rem;
 }
-section p{
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    text-align: justify;
-    text-indent: 3rem;
-}
-section h3{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-ul{
-    list-style-type: none;
-    text-align: left;
-    padding: 0%;
-    margin: 0%;
-}
-section li{
-    margin-bottom: 0.5rem;
+
+.content{
+    display: flex;
+    flex-direction: column;
 }
 
-#cards{
-    width: 100%;
-    background-color: #e2e2e2;
+section .img img{
+    border-radius: 50%;
+    width: 15rem;
+    height: auto;
+    object-fit: cover;
+    transform: rotate(25deg);
+    transition: rotate 2s ease-in-out;
+}
+
+section .img img:hover{
+    transform: rotate(0deg);
+}
+
+.cards{
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -67,12 +52,49 @@ section li{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: #f2f2f2;
-    width: 200px;
+    background-color: #d2d2d2;
+    width: 100px;
     justify-content: center;
 }
-
 .card:hover{
     background-color: #e2e2e2;
     border: solid 1px #000;
+}
+
+.content .description{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-indent: 3rem;
+}
+
+section h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #f2f2f2;
+        border-radius: 1rem;
+        gap: 1.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #d2d2d2;
+        width: 200px;
+        justify-content: center;
+    }
 }

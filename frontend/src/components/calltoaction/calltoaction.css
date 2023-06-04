@@ -34,7 +34,7 @@ textarea{
 }
 button[type="submit"]{
     background-color: #c0c0c0;
-    width: 80%;
+    width: 100%;
     display: block;
     align-self: center;
     border-radius: 6px;
@@ -43,4 +43,11 @@ button[type="submit"]{
 }
 button[type="submit"]:hover{
     background-color: #a0a0a0;
+}
+
+.btn{
+    align-self: center;
+    width: 80%;
+    display: flex;
+    gap: 2rem;
 }

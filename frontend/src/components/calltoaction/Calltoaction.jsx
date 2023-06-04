@@ -27,11 +27,22 @@ const Calltoaction = () => {
       return;
     }
 //post user info and message to server and save in mongodb database
-    axios.post("/user", { name, email, message, })
-          .then(response => {
-            console.log(response.data)
-          })
 
+const action = e.target.elements
+
+if(action.value === "request"){
+    axios.post("/apiuser", { name, email, message, })
+              .then(response => {
+                console.log(response.data)
+              })
+}else if (action.value === "testify"){
+  const client = name
+  const testimonial = message
+    axios.post("/apitestimonials", {client, testimonial})
+              .then(response => {
+                console.log(response.data)
+              })
+}
 
     emailjs.sendForm(serviceID, templateID, templateParams, publicKey)
         .then(function(response) {
@@ -57,7 +68,10 @@ const Calltoaction = () => {
           <label htmlFor="message">Message: </label>
           <textarea name="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}  cols="30" rows="10" required></textarea>
         </div>
-        <button type='submit' className='sbtbtn'>Submit</button>
+        <div className='btn'>
+          <button type='submit' name='action' value="request">Request</button>
+          <button type='submit' name='action' value="testify">Testify</button>
+        </div>
       </form>
     </div>
   )

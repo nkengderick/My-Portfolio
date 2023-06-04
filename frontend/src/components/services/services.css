@@ -16,35 +16,15 @@
 }
 .servicecard{
     display: block;
-    width: 100%;
-    padding: 1rem;
+    width: 400px;
     background-color: #f2f2f2;
-    justify-content: center;
+    margin-right: 20px;
+    border-radius: 15px;
+    padding: 2rem;
+}
+.servicecard:hover{
+    border: #000 solid 1px;
 }
 
-
-@media screen and (min-width: 1024px) {
-    .servicecards{
-        width: 100%;
-        background-color: #e2e2e2;
-        padding: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        row-gap: 2rem;
-        justify-content: center;
-    }
-    .servicecard{
-        display: block;
-        width: 20%;
-        background-color: #f2f2f2;
-        justify-content: center;
-        margin-right: 20px;
-        border-radius: 15px;
-    }
-    .servicecard:hover{
-        border: #000 solid 1px;
-    }
-}
 
     

@@ -1,0 +1,43 @@
+.Footer{
+    background-color: aliceblue;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem 0 2rem 0;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.Footer .link{
+    color: blue;
+}
+
+.Footer .link:hover{
+    color: purple;
+}
+.footerLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 2rem;
+}
+.footerMedias{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.footerMedias .link{
+    font-size: 1rem;
+    background-color: #a2a2a2;
+    color: blue;
+    padding:.8rem;
+    border: 1px solid transparent;
+    border-radius: .7rem;
+}

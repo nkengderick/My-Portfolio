@@ -11,9 +11,10 @@
     height: 100%;
     text-align: center;
     position: relative;
+    background-color: aliceblue;
 }
 .profile{
-    background: linear-gradient(#f2f2f2, transparent);
+    background: linear-gradient(aliceblue, transparent);
     height: 22rem;
     padding: 0rem 1.5rem 1.5rem 1.5rem;
 }

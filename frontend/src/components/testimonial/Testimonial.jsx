@@ -1,10 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import './testimonial.css'
 
+import axios from 'axios';
+
+import { Pagination, Navigation, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import face from '../../assets/images/face.png'
+
+
 const Testimonial = () => {
+
+  const [testimonials, setTestimonials] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/apitestimonials')
+    .then((response) => {
+      setTestimonials(response.data)
+    })
+  }, [])
+
+
   return (
-    <div className='Testimonial' id='testimonial'>
-        <h1>Testimonial</h1>
+    <div className='Testimonial' id='testimonials'>
+        <h4>See what others are saying</h4>
+        <h1>Testimonials</h1>
+
+        <Swiper 
+          className="testimonials"
+          modules={[Pagination, Navigation, Scrollbar, A11y]}
+          spaceBetween={40}
+          slidePerView={1}
+          pagination = {{ clickable: true}}
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id} className='testimonial'>
+                <div className='face'>
+                    <img src={face} alt="client" />
+                </div>
+                <h5>{testimonial.client}</h5>
+                <small>{testimonial.testimonial}</small>
+            </SwiperSlide>
+          ))}
+
+
+        </Swiper>
     </div>
   )
 }

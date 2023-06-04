@@ -22,15 +22,15 @@ const About = () => {
   return (
 
     <div className='About' id='about'>
-              <Navbar />
-      <section className='about'>
           <h1>About Me</h1>
+      <section className='about'>
             <div className='img'>
               <img src={myimg} alt="Nkengbeza Derick" />
-            </div>          
-          <h2>{aboutme.name}</h2>
-          <h5>{aboutme.specialty}</h5>
-          <div id='cards'>
+              <h2>{aboutme.name}</h2>
+              <h5>{aboutme.specialty}</h5>
+            </div>   
+        <div className='content'>
+          <div className='cards'>
             <div className='card'>
                 <p>Experience</p>
                 <p>{aboutme.experience}</p>
@@ -44,10 +44,10 @@ const About = () => {
                 <p>{aboutme.skill}</p>
             </div>
           </div>
-          <p>{aboutme.description}</p>
+          <p className='description'>{aboutme.description}</p>
+        </div>       
       </section>
       <Ctabtn/>
-      <Contact />
     </div>
   )
 }

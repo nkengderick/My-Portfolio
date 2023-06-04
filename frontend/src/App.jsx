@@ -8,19 +8,18 @@ import Testimonial from './components/testimonial/Testimonial';
 import Contact from "./components/contact/Contact";
 import Ctabtn from './components/calltoaction/ctabtn';
 import Header from './components/header/Header';
-import Landing from './components/Landing/Landing';
+import Services from './components/services/Services';
+import About from './components/about/About'
 
 const App = () => {  
   return (
     <div className="App">
         <Navbar />
         <Header />
-        <Landing />
-        <Ctabtn />
+        <About />
         <Experience />
-        <Ctabtn />
+        <Services />
         <Projects />
-        <Ctabtn />
         <Testimonial />
         <Contact />
         <Footer />
