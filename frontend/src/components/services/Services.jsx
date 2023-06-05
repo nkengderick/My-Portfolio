@@ -1,44 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState} from "react";
 import './services.css';
-import Contact from '../contact/Contact'
 import Ctabtn from '../calltoaction/ctabtn';
-import Navbar from '../navbar/Navbar';
+import axios from 'axios'
 
 const Services = () => {
+  const [services, setServices] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/apiservices')
+    .then((response) => {
+      setServices(response.data)
+    })
+  }, [])
   return (
     <div className='Services' id='services'>
-      <h2>What i offer⬇️</h2>
       <div className='serve'>
-        <h1>Services</h1>
         <div className="servicecards">
-          <div className="servicecard">
-            <h2>Frontend Developement: </h2>
-            <p>I specialize on creating modern user interfaces using css, bootstrap, react. With my experience i can create you responsive user friendly websites to enhance your brand</p>
+          <div className="serviceheader">
+        <h1>Services</h1>
+      <h2>What i offer⬇️</h2>
           </div>
-          <div className="servicecard">
-            <h2>Backend Developement: </h2>
-            <p>As a full stack developer, i have extensive experience in backend using nodejs, Express, c++ and java. i can buid you a reliable and scalable system whether you need a third party to integrate i am experienced in working with APIs.</p>
+      <br />
+      {services.map((service) => (
+          <div key={service.id} className="servicecard">
+            <h2>{service.offer}</h2>
+            <p>{service.details}</p>
           </div>
-          <div className="servicecard">
-
-            <h2>Full stack development with MERN: </h2>
-            <p>MERN stack is my favorite technoloy to work with. It is powerful and with my experties in MERN i can build you awesome full fledge applications from scratch or add features to your exiting one</p>
-          </div>
-          <div className="servicecard">
-
-            <h2>Moblie App Developement: </h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores esse recusandae illum accusamus voluptatum magnam repellendus ducimus, id consequuntur tenetur voluptas optio exercitationem suscipit fugit dolorem at. Distinctio, saepe nobis!</p>
-          </div>
-          <div className="servicecard">
-
-            <h2>Desktop Application Development with JAVA</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sed distinctio voluptates quisquam perferendis consectetur aspernatur, fugiat mollitia minus vitae sit quod deserunt ex sapiente blanditiis ipsa eveniet suscipit! Deleniti!</p>
-          </div>
-          <div className="servicecard">
-            <h2>Other services: </h2>
-            <p>UI/UX design</p>
-            <p>Technical Consultancy</p>
-          </div>
+      ))}
         </div>
       </div>
       <h2>Get in touch</h2>

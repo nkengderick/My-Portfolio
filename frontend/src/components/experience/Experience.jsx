@@ -2,8 +2,6 @@ import React, { useEffect, useState} from "react";
 import './experience.css'
 import axios from 'axios'
 
-import {FaReact} from 'react-icons/fa'
-
 const Experience = () => {
 
   const [skills, setSkills] = useState([])

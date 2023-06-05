@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './projects.css'
@@ -6,8 +8,14 @@ import mern from '../../assets/images/MER.jpg'
 
 const Portfolio = () => {
 
+  const convert = (buffer) => {
+    const image = new Image();
+    image.src = `data:image/jpeg;base64,${buffer}`;
+    return image;
+  };
+
   const [projects, setProjects] = useState([])
-    
+
   useEffect(() => {
     axios.get('http://localhost:8000/apiproject')
     .then((response) => {
@@ -21,17 +29,19 @@ const Portfolio = () => {
       <h1>Projects I've worked on</h1>
       <div className='projects'>
          { projects.map((newProject) => (
-            <div key={newProject.id} className='project'>
-                  <div className='projectimg'>
-                    <img src = {mern} />
-                  </div>
-                  <h3>{newProject.title}</h3>
-                  <p>{newProject.description}</p>
-                  <div className="projectcta">
-                    <a href={newProject.link} target='blanc'>Github</a>
-                  </div>
-              </div>
-           ))}
+
+          <div key={newProject.id} className='project'>
+           <div className='projectimg'>
+           <img src = {`data:image/jpeg;base64,${newProject.image}`} />
+           </div>
+           <h3>{newProject.title}</h3>
+           <p>{newProject.description}</p>
+           <div className="projectcta">
+           <a href={newProject.link} target='blanc'>Github</a>
+           </div>
+           </div>
+          
+))}
         </div>
         </div>
   )

@@ -1,39 +1,54 @@
+
+
+const multer = require('multer')
 const Project = require('../models/project')
 const asyncHandler = require('express-async-handler')
+const { get } = require('mongoose')
 
-
-const createnewproject = asyncHandler(async (req, res) => {
-    const {title, description, link} = req.body
-    
-    if (!title || !description || !link){
-        return res.status(400).json({message: 'imcomplete project'})
-    }
-    
-        //create and store request
-        const newProjectObject = { title, description, link }
-        const newProject = await Project.create(newProjectObject)
-    
-        //create
-        if(newProject){
-            res.status(201).json({
-                message: 'Project saved'
-            })
-        }else{
-            res.status(400).json({
-                message: 'Invalid'
-            })
-        }
-    /*
-    const newproject = new Project({
-        name: "MERN Project",
-        description: "This is my first mern project.",
-        image: '../views/images/MER.jpg',
-      })
-
-      await newproject.save()
-        */
+const Storage = multer.diskStorage({
+  destination: './views/images/projects',
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
 })
 
+const upload = multer({
+  storage: Storage
+}).single('projectimage')
+
+const createnewproject = asyncHandler(async (req, res) => {
+
+  upload(req, res, (err) => {
+    if(err){
+        console.log(err)
+    } else {
+        const newproject = new Project({
+            title: req.body.title,
+            description: req.body.description,
+            link: req.body.link,
+            image: {
+              data:req.file.filename,
+              contentType: 'image/png',
+            }
+        })
+      
+         newproject
+            .save()
+            .then(()=>res.send('Successfully uploaded'))
+            .catch((err) => console.log(err))
+            
+            if(newproject){
+              res.status(201).json({
+                message: 'Project saved'
+              })
+            }else{
+              res.status(400).json({
+                message: 'Invalid'
+              })
+            }
+          }
+        })
+})
 
 
   const getAllprojects = asyncHandler(async (req, res) => {
@@ -48,8 +63,8 @@ const createnewproject = asyncHandler(async (req, res) => {
 
   const updateproject = asyncHandler(async (req, res) => {
     const project = await Project.findById(id).lean();
-    project.title = "";
-    project.description = "";
+    project.title = req.body.title;
+    project.description = req.body.description;
 
     await project.save();
   })

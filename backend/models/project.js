@@ -1,3 +1,5 @@
+
+
 const mongoose = require("mongoose")
 
 const projectSchema = new mongoose.Schema({
@@ -9,6 +11,10 @@ const projectSchema = new mongoose.Schema({
     },
     link: {
         type: String,
+    },
+    image: {
+        data:Buffer,
+        contentType: String,
     },
 })
 

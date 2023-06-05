@@ -31,8 +31,10 @@ app.use(require('./routes/projectroute.js'))
 app.use(require('./routes/aboutroute.js'))
 app.use(require('./routes/skillsroute'))
 app.use(require('./routes/testimonialroute'))
+app.use(require('./routes/imgroute'))
+app.use(require('./routes/servicesroute'))
 
-//404 route
+//404 route 
 app.all('*', (req, res) => {
   res.status(404)
   if (req.accepts('html')){

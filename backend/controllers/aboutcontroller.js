@@ -1,6 +1,5 @@
 const About = require('../models/about')
 const fs = require('fs')
-const fsPromises = require('fs').promises
 const path = require('path')
 
 const asyncHandler = require('express-async-handler')
