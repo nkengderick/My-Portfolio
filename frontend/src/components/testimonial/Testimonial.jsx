@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import face from '../../assets/images/face.png'
+import me from '../../assets/images/mytest.jpg'
 
 
 const Testimonial = () => {
@@ -37,7 +38,13 @@ const Testimonial = () => {
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id} className='testimonial'>
                 <div className='face'>
-                    <img src={face} alt="client" />
+                    <img src={
+                      testimonial.client === "Client1" ? me :
+                      testimonial.client === "Client2" ? face :
+                      testimonial.client === "Client3" ? me :
+                      testimonial.client === "Client4" ? face :
+                      me
+                    } alt="client" />
                 </div>
                 <h5>{testimonial.client}</h5>
                 <small>{testimonial.testimonial}</small>

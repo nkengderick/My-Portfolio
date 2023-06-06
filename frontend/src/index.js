@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import About from './components/about/About';
-import Services from './components/services/Services';
+import { MdDisabledByDevTools } from '@fvilers/disable-react-devtools';
 
+if (process.env.NODE_ENV)
 
 import {
   createBrowserRouter,
@@ -14,14 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/services",
-    element: <Services />,
   },
 ]);
 

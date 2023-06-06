@@ -4,12 +4,10 @@ const nodemailer = require("nodemailer")
 const asyncHandler = require('express-async-handler')
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.elasticemail.com",
-    port: 8000,
-    secure: true,
+    service: "gmail",
     auth: {
         user: "nkengportfolio@gmail.com",
-        pass: "7A9821F07508CCBB94F98299DB9630A1C23F",
+        pass: "lfxtryqkxpayjrjz",
     }
 })
 //get request
@@ -57,8 +55,8 @@ const createNewUserRequest = asyncHandler(async (req, res) => {
         }
         const newrequestnotification = {
             from: "nkengportfolio@gmail.com",
-            to: "nkengportfolio@gmail.com",
-            subject: "Portfolio request message from [name]",
+            to: "nkengbderick@gmail.com",
+            subject: `Portfolio request message from [${name}]`,
             text: message,
         }
         transporter.sendMail(autoreplymail, function(error, info){

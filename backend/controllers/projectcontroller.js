@@ -6,7 +6,7 @@ const asyncHandler = require('express-async-handler')
 const { get } = require('mongoose')
 
 const Storage = multer.diskStorage({
-  destination: './views/images/projects',
+  destination: './public/images/projects',
   filename: (req, file, cb) => {
     cb(null, file.originalname)
   }

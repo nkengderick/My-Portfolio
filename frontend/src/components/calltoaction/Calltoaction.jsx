@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import axios from "axios";
 import './calltoaction.css'
-import emailjs from 'emailjs-com'
+//import emailjs from 'emailjs-com'
 
 //default axios 
 axios.defaults.baseURL = "http://localhost:8000";
@@ -13,7 +13,8 @@ const Calltoaction = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [action, setAction] = useState("");
+  
 
   const handlesubmit = (e) => {
 
@@ -37,22 +38,27 @@ const Calltoaction = () => {
           console.log('SUCCESS!', response.status, response.text);
         }          
 */
+const url = action === "request" ? "/apiuser"
+          : action === "testify" ? "/apitestimonials"
+          : "/apiuser"
 
-const action = e.target.elements
 
-if(action.value === "request"){
-    axios.post("/apiuser", { name, email, message, })
+{url === "/apiuser" ? (
+  axios.post(url, { name, email, message })
               .then(response => {
                 console.log(response.data)
               })
-}else if (action.value === "testify"){
-  const client = name
-  const testimonial = message
-    axios.post("/apitestimonials", {client, testimonial})
-              .then(response => {
-                console.log(response.data)
-              })
-}
+              ) :
+              url === "/apitestimonials" ? (
+                axios.post(url, { client: name, testimonial: message })
+                .then(response => {
+                  console.log(response.data)
+                })
+                ) :  axios.post(url, { name, email, message, })
+                .then(response => {
+                  console.log(response.data)
+                })
+              }
 
 
     }
@@ -74,8 +80,8 @@ if(action.value === "request"){
           <textarea name="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}  cols="30" rows="10" required></textarea>
         </div>
         <div className='btn'>
-          <button type='submit' name='action' value="request">Request</button>
-          <button type='submit' name='action' value="testify">Testify</button>
+          <button type='submit' name="request" onClick={(e) => setAction(e.target.name)}>Request</button>
+          <button type='submit' name="testify" onClick={(e) => setAction(e.target.name)}>Testify</button>
         </div>
       </form>
     </div>

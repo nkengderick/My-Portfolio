@@ -6,7 +6,7 @@ import Ctabtn from '../calltoaction/ctabtn'
 import axios from 'axios'
 
 import myimg from '../../assets/images/me.jpg'
-import Navbar from '../navbar/Navbar'
+import Navbar from '../Navigate/Navbar'
 
 const About = () => {
 

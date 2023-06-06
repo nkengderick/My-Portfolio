@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import './projects.css'
 import axios from 'axios'
 import mern from '../../assets/images/MER.jpg'
+import figma from '../../assets/images/figma.png'
+import airline from '../../assets/images/airline.jpg'
+import pharma from '../../assets/images/javapharmacy.jpg'
 
 const Portfolio = () => {
 
@@ -30,9 +33,14 @@ const Portfolio = () => {
       <div className='projects'>
          { projects.map((newProject) => (
 
-          <div key={newProject.id} className='project'>
+          <div key={newProject._id} className='project'>
            <div className='projectimg'>
-           <img src = {`data:image/jpeg;base64,${newProject.image}`} />
+           <img src = {
+            newProject._id === "647d931dd6fd1d5f2fdbff35" ? pharma : 
+            newProject._id === "647d9377d6fd1d5f2fdbff38" ? figma : 
+            newProject._id === "647d93f2d6fd1d5f2fdbff3e" ? mern : 
+            newProject._id === "647e2c94ff0304b8c844acca" ? airline : 
+            mern} />
            </div>
            <h3>{newProject.title}</h3>
            <p>{newProject.description}</p>

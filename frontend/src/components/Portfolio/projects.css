@@ -28,6 +28,8 @@
 .projectimg{
     border-radius: 50px;
     overflow: hidden;
+    width: 280px;
+    height: 180px;
 }
 
 .project h3{

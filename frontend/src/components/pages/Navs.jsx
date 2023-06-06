@@ -1,10 +1,9 @@
 import React from "react";
-import './navbar.css'
 import { HashLink as Link } from "react-router-hash-link";
 
-const Navbar = () => {  
+const Navs = () => {  
   return (
-    <div className="Navbar">
+    <div className="Navs">
 <ul>
     <li><Link to="#contact">Contact</Link></li>
     <li><Link to="/services">Services</Link></li>
@@ -15,4 +14,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar
+export default Navs

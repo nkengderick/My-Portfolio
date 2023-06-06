@@ -8,19 +8,19 @@ const asyncHandler = require('express-async-handler')
 const saveTestimonials = asyncHandler(async (req, res) => {
     const testimonials = [
       {
-        testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupti",
+        testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elitDolor, corrupti Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupti",
         client: "Client1",
       },
       {
-        testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupti",
+        testimonial: "Lorem ipsum, Lorem ipsum, dolor sit amet consectetur adipisicing elitdolor sit amet consectetur adipisicing elit. Dolor, corrupi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupi ",
         client: "Client2",
       },
       {
-        testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupti",
+        testimonial: "Lorem ipsum, Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit. Dolor, corrupi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupi ",
         client: "Client3",
       },
       {
-        testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupti",
+        testimonial: "Lorem ipsum, Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit. Dolor, corrupi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, corrupi ",
         client: "Client4",
       },
     ];
@@ -69,13 +69,12 @@ const updateTestimonial = asyncHandler(async (req, res) => {
   })
   
   const deleteTestimonial = asyncHandler(async (req, res) => {
-    const id = req.body.id  
-    const testimonial = await Testimonials.findById(id);
+    const testimonial = await Testimonials.findById(req.body._id);
   
       if (!testimonial) {
         return res.status(404).json({message: "Testimonial not found"})
       }else{
-        await Testimonials.deleteOne()
+        await Testimonials.deleteOne(testimonial)
         res.json({message: "Testimonial deleted successfully"})
       }
   })
