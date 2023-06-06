@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { MdDisabledByDevTools } from '@fvilers/disable-react-devtools';
 
-if (process.env.NODE_ENV)
-
 import {
   createBrowserRouter,
   RouterProvider,
