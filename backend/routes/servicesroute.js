@@ -4,7 +4,7 @@ const router = express.Router();
 const { getservice, getservices, myservices } = require('../controllers/servicescontroller');
 
 
-router.route('/apiservices')
+router.route('/api/services')
   //  .post(myservices)
     .get(getservices)
 

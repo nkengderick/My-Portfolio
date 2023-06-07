@@ -4,7 +4,7 @@ import './calltoaction.css'
 //import emailjs from 'emailjs-com'
 
 //default axios 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://nkeng-portfolio.onrender.com";
 axios.defaults.withCredentials = false;
 axios.defaults.headers = {'Access-Control-Allow-Origin' : '*', 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS' }
 
@@ -38,18 +38,18 @@ const Calltoaction = () => {
           console.log('SUCCESS!', response.status, response.text);
         }          
 */
-const url = action === "request" ? "/apiuser"
-          : action === "testify" ? "/apitestimonials"
-          : "/apiuser"
+const url = action === "request" ? "/api/user"
+          : action === "testify" ? "/api/testimonials"
+          : "/api/user"
 
 
-{url === "/apiuser" ? (
+{url === "/api/user" ? (
   axios.post(url, { name, email, message })
               .then(response => {
                 console.log(response.data)
               })
               ) :
-              url === "/apitestimonials" ? (
+              url === "/api/testimonials" ? (
                 axios.post(url, { client: name, testimonial: message })
                 .then(response => {
                   console.log(response.data)

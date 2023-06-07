@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {postimg, getimage} = require('../controllers/imgcontroller')
 
-router.route('/apiimg')
+router.route('/api/img')
     .post(postimg)
     .get(getimage)
 

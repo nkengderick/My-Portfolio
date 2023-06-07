@@ -1,5 +1,6 @@
 .projects{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
 }
@@ -11,6 +12,7 @@
     border: solid transparent 1px;
     transition: all 350ms ease-in-out;
     margin: 1rem;
+    align-self: center;
 }
 
 .project:hover{

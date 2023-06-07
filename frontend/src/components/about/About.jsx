@@ -13,7 +13,7 @@ const About = () => {
     const [aboutme, setAboutme] = useState([])
     
     useEffect(() => {
-      axios.get('http://localhost:8000/apiabout')
+      axios.get('https://nkeng-portfolio.onrender.com/api/about')
       .then((response) => {
         setAboutme(response.data)
       })

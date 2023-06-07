@@ -4,7 +4,7 @@ const router = express.Router();
 const { getaboutme, aboutmedata, updateAboutmedata } = require('../controllers/aboutcontroller')
 
 
-router.route('/apiabout')
+router.route('/api/about')
     .post(aboutmedata)
     .get(getaboutme)
     .patch(updateAboutmedata)

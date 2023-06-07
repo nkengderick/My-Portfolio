@@ -22,7 +22,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 //root route
-app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/api', express.static(path.join(__dirname, 'public')))
 
 //route
 app.use(require('./routes/root'))

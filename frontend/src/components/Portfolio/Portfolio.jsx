@@ -20,7 +20,7 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/apiproject')
+    axios.get('https://nkeng-portfolio.onrender.com/api/project')
     .then((response) => {
       setProjects(response.data)
     })

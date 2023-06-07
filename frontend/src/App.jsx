@@ -10,12 +10,10 @@ import Header from './components/header/Header';
 import Services from './components/services/Services';
 import About from './components/about/About'
 import Navbar from './components/Navigate/Navbar'
-import Navs from './components/pages/Navs'
 
 const App = () => {  
   return (
     <div className="App">
-        <Navs/>
         <Header />
         <Navbar/>
         <About />

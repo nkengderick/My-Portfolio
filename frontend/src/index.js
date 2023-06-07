@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { MdDisabledByDevTools } from '@fvilers/disable-react-devtools';
-
+ 
 import {
   createBrowserRouter,
   RouterProvider,
