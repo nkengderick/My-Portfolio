@@ -1,5 +1,6 @@
 .Footer{
-    background-color: aliceblue;
+    color: black;
+    background-color: yellow;
     margin-top: 2rem;
     text-align: center;
     padding-top: 2rem 0 2rem 0;
@@ -13,11 +14,11 @@
 }
 
 .Footer .link{
-    color: blue;
+    color: black;
 }
 
 .Footer .link:hover{
-    color: purple;
+    color: white;
 }
 .footerLinks{
     display: flex;
@@ -35,9 +36,16 @@
 }
 .footerMedias .link{
     font-size: 1rem;
-    background-color: #a2a2a2;
-    color: blue;
+    background-color: black;
+    color: rgb(184, 166, 9);
     padding:.8rem;
     border: 1px solid transparent;
     border-radius: .7rem;
+    transition: all 400ms ease-in-out;
+}
+
+.footerMedias .link:hover{
+    background-color: transparent;
+    border: black solid 1px;
+    color: black;
 }

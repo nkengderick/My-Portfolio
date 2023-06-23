@@ -9,9 +9,9 @@ const Ctabtn = () => {
   return (
 
     <div className='Ctabtn'>
-      <button type='Download' id='downloadcv' ><a href={cv} download={cv}>Download CV</a></button>
         <p>
-        <Link to="#calltoaction" id='get'>Get to me</Link>
+        <Link id='linkone' to={cv} download={cv}>Download CV</Link>
+        <Link to="#calltoaction" id='linktwo'>Get to me</Link>
         </p>
     </div>
   )

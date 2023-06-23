@@ -2,7 +2,7 @@ import React from 'react'
 import { HashLink as Link } from "react-router-hash-link"
 import './footer.css'
 import { BsLinkedin } from 'react-icons/bs';
-import {FaGithub, FaFacebookF } from 'react-icons/fa'
+import {FaGithub, FaFacebookF, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -25,6 +25,7 @@ const Footer = () => {
         <li><Link className='link' to="https://facebook.com" target='blank'><FaFacebookF/></Link></li>
         <li><Link className='link' to="https://linkedin.com" target='blank'><BsLinkedin/></Link></li>
         <li><Link className='link' to="https://github.com" target='blank'><FaGithub/></Link></li>
+        <li><Link className='link' to="https://twitter.com" target='blank'><FaTwitter/></Link></li>
       </ul>
       
       <div className="copyRight">

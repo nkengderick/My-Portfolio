@@ -23,7 +23,7 @@ const Header = () => {
       <div className='profile'>
         <img src={Profile} alt="Engr. Nkengbeza" className='profilepic' />
       </div>
-      <p className='scroll'><Link to='#contact' smooth>Scroll down</Link></p>
+      <p className='scroll'><Link className='scrolldown' to='#contact' smooth>Scroll down</Link></p>
       </div>
   )
 }

@@ -1,15 +1,19 @@
 .Calltoaction{
     margin-top: 50px;
-    border-radius: 50px 50px;
-    background-color: #ddd;
-    padding: 1rem;
+    width: 100%;
+    align-self: center;
 }
 
 form{
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 600px;
     margin: auto;
+    background-color: rgb(184, 166, 9);
+    opacity: 0.8;
+    border-radius: 50px 50px;
+    color: black;
 }
 form div{
     margin-bottom: 20px;
@@ -22,7 +26,7 @@ form label{
 }
 input, textarea{
     text-align: left;
-    border: 1px solid #ccc;
+    border: 2px solid yellow;
     font-size: 0.8rem;
     padding: 5px;
     border-radius: 6px;
@@ -33,16 +37,20 @@ textarea{
     height: 150px;
 }
 button[type="submit"]{
-    background-color: #c0c0c0;
+    background-color: yellow;
     width: 100%;
+    border: solid 1px transparent;
     display: block;
     align-self: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 1rem;
     margin-bottom: 0.5rem;
+    transition: all 350ms ease-in-out;
 }
 button[type="submit"]:hover{
-    background-color: #a0a0a0;
+    background-color: transparent;
+    border: yellow solid 1px;
+    color: yellow;
 }
 
 .btn{
@@ -50,4 +58,10 @@ button[type="submit"]:hover{
     width: 80%;
     display: flex;
     gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    form{
+        max-width: 100%;
+    }
 }

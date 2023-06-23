@@ -6,7 +6,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app",
     "build": "babel -d dist"
   },
   "dependencies": {

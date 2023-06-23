@@ -60,7 +60,6 @@ const url = action === "request" ? "/api/user"
                 })
               }
 
-
     }
   return (
     <div className='Calltoaction' id='calltoaction'>

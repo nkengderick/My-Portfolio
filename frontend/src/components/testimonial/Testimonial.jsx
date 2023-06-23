@@ -47,7 +47,7 @@ const Testimonial = () => {
                     } alt="client" />
                 </div>
                 <h5>{testimonial.client}</h5>
-                <small>{testimonial.testimonial}</small>
+                <p>{testimonial.testimonial}</p>
             </SwiperSlide>
           ))}
 

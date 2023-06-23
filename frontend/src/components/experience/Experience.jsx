@@ -20,10 +20,12 @@ const Experience = () => {
       <p>I have a mastery of the following programming languages and frameworks</p>
       <div className="skills">
           {skills.map((skill) => (
-          <div key={skill.id} className="skill">
-          <h4>{skill.name}</h4>
-          <p>{skill.level}</p>
-          </div>
+          <ul key={skill.id} className="skill">
+            <li className="list">
+              <h4>{skill.name}</h4>
+              <p>{skill.level}</p>
+            </li>
+          </ul>
       ))}
       </div> 
     </div>

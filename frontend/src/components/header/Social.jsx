@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom'
 const Social = () => {
   return (
     <div className='Social'>
-        <Link to='https://linkedin.com' target='blank'><BsLinkedin/> </Link>
-        <Link to='https://github.com/' target='blank'><FaGithub/> </Link>
-        <Link to='https://facebook.com' target='blank'><FaFacebookF/> </Link>
-        <Link to='https://twitter.com' target='blank'><CgTwitter/> </Link>
+        <Link className='link' to='https://linkedin.com' target='blank'><BsLinkedin/> </Link>
+        <Link className='link' to='https://github.com/' target='blank'><FaGithub/> </Link>
+        <Link className='link' to='https://facebook.com' target='blank'><FaFacebookF/> </Link>
+        <Link className='link' to='https://twitter.com' target='blank'><CgTwitter/> </Link>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 .About{
-    margin-top: 3rem;
-    margin-bottom: 3rem;    
+    margin: 6rem 3rem 3rem 3rem;
 }
 
 
@@ -8,7 +7,6 @@
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: aliceblue;
     border-radius: 1rem;
     gap: 1.5rem;
 }
@@ -29,13 +27,26 @@ section h5{
 
 section .img img{
     border-radius: 50%;
-    width: 15rem;
-    height: auto;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     transform: rotate(25deg);
     transition: rotate 2s ease-in-out;
 }
-
+section .me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    background-color: yellow;
+    border-radius: 0px 200px 0px 0px;
+}
+section .img{
+    margin-right: 10rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}
 section .img img:hover{
     transform: rotate(0deg);
 }
@@ -51,13 +62,20 @@ section .img img:hover{
 .card{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: skyblue;
-    width: 100px;
-    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(184, 166, 9);
+    width: 200px;
+    border: solid transparent 1px;
+    transition: all 500ms ease-in-out;
+    justify-content: space-evenly;
+    height: 250px;
+    color: black;
+
 }
 .card:hover{
-    border: solid 1px #000;
+    border: solid 2px yellow;
+    background: transparent;
+    color: yellow;
 }
 
 .content .description{
@@ -73,27 +91,26 @@ section h3{
     margin-bottom: 1rem;
 }
 
-
 @media screen and (max-width: 600px) {
     .about{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background-color: #f2f2f2;
         border-radius: 1rem;
         gap: 1.5rem;
     }
-    
-}
-
-@media screen and (min-width: 800px) {
-    .card{
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        background-color: #d2d2d2;
-        width: 200px;
-        justify-content: center;
+    section .img img{
+        width: 285px;
+        height: 285px;
     }
+    section .img{
+        margin-right: 0;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+    section .me{
+        background-color: transparent;
+    }
+    
 }

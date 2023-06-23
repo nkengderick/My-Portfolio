@@ -25,7 +25,9 @@ const About = () => {
           <h1>About Me</h1>
       <section className='about'>
             <div className='img'>
+              <div className="me">
               <img src={myimg} alt="Nkengbeza Derick" />
+              </div>
               <h2>{aboutme.name}</h2>
               <h5>{aboutme.specialty}</h5>
             </div>   

@@ -1,3 +1,6 @@
+.Portfolio{
+    margin-top: 5rem;
+}
 .projects{
     display: flex;
     justify-content: center;
@@ -6,7 +9,7 @@
 }
 
 .project{
-    background-color: lightblue;
+    background-color: rgb(184, 166, 9);
     padding: 1rem;
     border-radius: 2rem;
     border: solid transparent 1px;
@@ -16,7 +19,7 @@
 }
 
 .project:hover{
-    border-color: black;
+    border-color: yellow;
     background: transparent;
 }
 
@@ -25,6 +28,50 @@
     align-items: center;
     margin-bottom:1rem;
     justify-content:center;
+    gap: 1.5rem;
+}
+
+.projectcta .git{
+    border-radius: 10px;
+    margin-top: 4rem;
+    color: black;
+    text-align: center;
+    display: block;
+    text-indent: 0%;
+    height: 3rem;
+    padding: 3px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+    transition: all 350ms ease-in-out;
+}
+.projectcta .git:hover{
+    background-color: transparent;
+    color: yellow;
+    border: yellow solid 1px;
+}
+.projectcta .live{
+    border: yellow solid 1px;
+    color: yellow;
+    text-align: center;
+    display: block;
+    text-indent: 0%;
+    height: 3rem;
+    padding: 3px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+    transition: all 350ms ease-in-out;
+    margin-top: 4rem;
+    border-radius: 10px;
+}
+.projectcta .live:hover{
+    background-color: yellow;
+    color: black;
 }
 
 .projectimg{

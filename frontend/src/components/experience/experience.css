@@ -2,19 +2,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aliceblue;
 }
 .skills{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+    background-color: rgb(184, 166, 9);
+    padding: 2rem;
+    border-radius: 2rem;
 }
-.skill{
+.skills .skill{
+    display: grid(repeat(2, 1fr));
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: black;
+    background-color: yellow;
+    padding: 1.5rem;
+}
+
+.skill .list{
     display: block;
-    padding: 5px;
-    background-color: #fff;
-    border: solid 1px #888;
-    width: 150px;
-    height: 100px;
+}
+
+@media screen and (min-width: 600px) {
+    .skills{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-gap: 3rem;
+    }
+    
 }

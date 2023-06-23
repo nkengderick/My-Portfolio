@@ -11,5 +11,12 @@
     content: '';
     width: 1px;
     height: 2.5rem;
-    background: blue;
+    background: yellow;
+}
+.Social .link{
+    color: yellow;
+}
+
+.Social .link :hover{
+    color: white;
 }

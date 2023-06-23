@@ -1,37 +1,56 @@
 .Ctabtn{
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
-    margin-top: 2.5rem;
 }
 
-.Ctabtn p #get{
+.Ctabtn p #linkone{
+    border: yellow solid 1px;
+    color: yellow;
+    text-align: center;
+    display: block;
+    text-indent: 0%;
+    height: 3rem;
+    padding: 3px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+    transition: all 500ms ease-in-out;
+    margin-top: 4rem;
+    border-radius: 10px;
+}
+
+.Ctabtn p #linktwo{
+    border-radius: 10px;
+    margin-top: 4rem;
     color: black;
     text-align: center;
     display: block;
     text-indent: 0%;
     height: 3rem;
     padding: 3px;
-    background-color: #aaa;
-    border-radius: 10px;
+    background-color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 7rem;
+    transition: all 500ms ease-in-out;
 }
-.Ctabtn button[type="Download"] a{
-    color: black;
-    height: 3rem;
-    text-align: center;
+
+.Ctabtn p{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3px;
-    background-color: #aaa;
-    border-radius: 10px;
-    font-size: large;
-    cursor: pointer;
+    gap: 2rem;
 }
-.Ctabtn button[type="Download"] a:hover, .Ctabtn p #get:hover{
-    background-color: #888;
+
+.Ctabtn p #linktwo:hover{
+    background-color: transparent;
+    color: yellow;
+    border: yellow solid 1px;
+
+}
+
+.Ctabtn p #linkone:hover{
+    background-color: yellow;
+    color: black;
 }

@@ -20,21 +20,21 @@ const Contact = () => {
           <MdOutlineEmail className="contactOptionIcon"/>
           <h4>Email: </h4>
           <h5>nkengbderick@gmail.com</h5>
-          <Link to="mailto:nkengbderick@gmail.com" target="blank">send a message</Link>
+          <Link id="link" to="mailto:nkengbderick@gmail.com" target="blank">send a message</Link>
         </article>
 
         <article className="contactOption">
           <BsWhatsapp className="contactOptionIcon"/>
           <h4>WhatsAPP: </h4>
           <h5>Direct message</h5>
-          <Link to="https://web.whatsapp.com/send?phone=+237681390155" target="blank">Whatsapp me</Link>
+          <Link id="link" to="https://web.whatsapp.com/send?phone=+237681390155" target="blank">Whatsapp me</Link>
         </article>
 
         <article className="contactOption">
           <AiOutlineLinkedin className="contactOptionIcon"/>
           <h4>Linkedin: </h4>
           <h5>My Profile</h5>
-          <Link to="https://linkedin.com" target="blank">linkedin</Link>
+          <Link id="link" to="https://linkedin.com" target="blank">linkedin</Link>
         </article>
       </div>
       <Calltoaction />
