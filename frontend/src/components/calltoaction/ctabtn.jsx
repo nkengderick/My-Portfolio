@@ -10,7 +10,7 @@ const Ctabtn = () => {
 
     <div className='Ctabtn'>
         <p>
-        <Link id='linkone' to={cv} download={cv}>Download CV</Link>
+        <a id='linkone' target='blank' href={cv} download>Download CV</a>
         <Link to="#calltoaction" id='linktwo'>Get to me</Link>
         </p>
     </div>

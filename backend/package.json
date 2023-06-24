@@ -6,8 +6,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon app",
-    "build": "babel -d dist"
+    "start": "nodemon app"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",

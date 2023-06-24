@@ -45,7 +45,7 @@ const Portfolio = () => {
            <h3>{newProject.title}</h3>
            <p>{newProject.description}</p>
            <div className="projectcta">
-           <a className='live' href="https://www.dribble.com" target='blanc'>Live Demo</a>
+           <a className='live' href="https://www.dribbble.com" target='blanc'>Live Demo</a>
            <a className='git' href={newProject.link} target='blanc'>Github</a>
            </div>
            </div>
