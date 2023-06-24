@@ -7,7 +7,7 @@ const Services = () => {
   const [services, setServices] = useState([])
 
   useEffect(() => {
-    axios.get('https://nkeng-portfolio.onrender.com/api/services')
+    axios.get('http://localhost:8000/api/services')
     .then((response) => {
       setServices(response.data)
     })

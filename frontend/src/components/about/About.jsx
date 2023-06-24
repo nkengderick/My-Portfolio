@@ -13,7 +13,7 @@ const About = () => {
     const [aboutme, setAboutme] = useState([])
     
     useEffect(() => {
-      axios.get('https://nkeng-portfolio.onrender.com/api/about')
+      axios.get('http://localhost:8000/api/about')
       .then((response) => {
         setAboutme(response.data)
       })
@@ -28,7 +28,7 @@ const About = () => {
               <div className="me">
               <img src={myimg} alt="Nkengbeza Derick" />
               </div>
-              <h2>{aboutme.name}</h2>
+              <h2>Mondoa Robert</h2>
               <h5>{aboutme.specialty}</h5>
             </div>   
         <div className='content'>
