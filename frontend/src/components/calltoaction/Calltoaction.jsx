@@ -4,7 +4,7 @@ import './calltoaction.css'
 //import emailjs from 'emailjs-com'
 
 //default axios 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://nkeng-portfolio.onrender.com";
 axios.defaults.withCredentials = false;
 axios.defaults.headers = {'Access-Control-Allow-Origin' : '*', 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS' }
 

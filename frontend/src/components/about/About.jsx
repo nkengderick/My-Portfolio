@@ -1,19 +1,17 @@
 import './about.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Contact from '../contact/Contact'
 import Ctabtn from '../calltoaction/ctabtn'
 import axios from 'axios'
 
 import myimg from '../../assets/images/me.jpg'
-import Navbar from '../Navigate/Navbar'
 
 const About = () => {
 
     const [aboutme, setAboutme] = useState([])
     
     useEffect(() => {
-      axios.get('http://localhost:8000/api/about')
+      axios.get('https://nkeng-portfolio.onrender.com/api/about')
       .then((response) => {
         setAboutme(response.data)
       })
@@ -28,7 +26,7 @@ const About = () => {
               <div className="me">
               <img src={myimg} alt="Nkengbeza Derick" />
               </div>
-              <h2>Mondoa Robert</h2>
+              <h2>{aboutme.name}</h2>
               <h5>{aboutme.specialty}</h5>
             </div>   
         <div className='content'>

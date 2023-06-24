@@ -16,7 +16,7 @@ const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/testimonials')
+    axios.get('https://nkeng-portfolio.onrender.com/api/testimonials')
     .then((response) => {
       setTestimonials(response.data)
     })

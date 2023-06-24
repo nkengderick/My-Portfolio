@@ -7,7 +7,7 @@ const Experience = () => {
   const [skills, setSkills] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/skills')
+    axios.get('https://nkeng-portfolio.onrender.com/api/skills')
     .then((response) => {
       setSkills(response.data)
     })
