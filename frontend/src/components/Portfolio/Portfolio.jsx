@@ -8,7 +8,7 @@ import mern from '../../assets/images/MER.jpg'
 import figma from '../../assets/images/figma.png'
 import airline from '../../assets/images/airline.jpg'
 import pharma from '../../assets/images/javapharmacy.jpg'
-import product from '../../assets/images/pruduct.jpg'
+import product from '../../assets/images/product.jpg'
 
 const Portfolio = () => {
 
