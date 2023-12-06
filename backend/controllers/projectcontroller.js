@@ -1,20 +1,8 @@
 
 
-const multer = require('multer')
 const Project = require('../models/project')
 const asyncHandler = require('express-async-handler')
-const { get } = require('mongoose')
 
-const Storage = multer.diskStorage({
-  destination: './public/images/projects',
-  filename: (req, file, cb) => {
-    cb(null, file.originalname)
-  }
-})
-
-const upload = multer({
-  storage: Storage
-}).single('projectimage')
 
 const createnewproject = asyncHandler(async (req, res) => {
 
@@ -26,10 +14,7 @@ const createnewproject = asyncHandler(async (req, res) => {
             title: req.body.title,
             description: req.body.description,
             link: req.body.link,
-            image: {
-              data:req.file.filename,
-              contentType: 'image/png',
-            }
+            demo: req.body.demo,
         })
       
          newproject
@@ -65,6 +50,8 @@ const createnewproject = asyncHandler(async (req, res) => {
     const project = await Project.findById(id).lean();
     project.title = req.body.title;
     project.description = req.body.description;
+    project.link = req.body.link;
+    project.demo = req.body.demo;
 
     await project.save();
   })
