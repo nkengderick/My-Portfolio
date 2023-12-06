@@ -12,9 +12,8 @@ const projectSchema = new mongoose.Schema({
     link: {
         type: String,
     },
-    image: {
-        data:Buffer,
-        contentType: String,
+    demo: {
+        Type: String,
     },
 })
 
