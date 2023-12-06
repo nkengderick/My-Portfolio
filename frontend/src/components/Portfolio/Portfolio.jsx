@@ -8,6 +8,7 @@ import mern from '../../assets/images/MER.jpg'
 import figma from '../../assets/images/figma.png'
 import airline from '../../assets/images/airline.jpg'
 import pharma from '../../assets/images/javapharmacy.jpg'
+import product from '../../assets/images/pruduct.jpg'
 
 const Portfolio = () => {
 
@@ -40,12 +41,13 @@ const Portfolio = () => {
             newProject._id === "647d9377d6fd1d5f2fdbff38" ? figma : 
             newProject._id === "647d93f2d6fd1d5f2fdbff3e" ? mern : 
             newProject._id === "647e2c94ff0304b8c844acca" ? airline : 
+            newProject._id === "656ffc21afea52db36d612e5" ? product : 
             mern} />
            </div>
            <h3>{newProject.title}</h3>
            <p>{newProject.description}</p>
            <div className="projectcta">
-           <a className='live' href="https://www.dribbble.com" target='blanc'>Live Demo</a>
+           <a className='live' href={newProject.demo} target='blanc'>Live Demo</a>
            <a className='git' href={newProject.link} target='blanc'>Github</a>
            </div>
            </div>
